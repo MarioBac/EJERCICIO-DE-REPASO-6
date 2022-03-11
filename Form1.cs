@@ -106,7 +106,16 @@ namespace EJERCICIO_DE_REPASO_6
             alquilere.alquiler = falquiler;
             alquilere.devolucion = fdevolucion;
             alquilere.kilo = kilo;
+           
+            
 
+            Carro carro = carros.Find(carros => carros.placa.Equals(placa));
+            
+            alquilere.marca = carro.marca;
+            alquilere.modelo = carro.modelo;
+            alquilere.color = carro.color;
+            alquilere.precio = Convert.ToInt32(carro.precio) ;
+            alquilere.TOTAL_A_PAGAR = carro.precio * alquilere.kilo;
             alquileres.Add(alquilere);
             CargarGrids();
         }

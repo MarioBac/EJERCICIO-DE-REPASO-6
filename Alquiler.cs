@@ -18,5 +18,6 @@ namespace EJERCICIO_DE_REPASO_6
         public string modelo { get; set; }
         public string color { get; set; }
         public int precio { get; set; }
+        public int TOTAL_A_PAGAR { get; set; }
     }
 }
